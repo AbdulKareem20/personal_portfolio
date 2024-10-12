@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Kareem - Personal Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Color Palette */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #001f3f;
+            /* Dark Navy Blue */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #ffffff !important;
+        }
+
+
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #20c997;
+            /* Teal */
+            border-color: #20c997;
+        }
+
+        .btn-primary:hover {
+            background-color: #138b72;
+            border-color: #138b72;
+        }
+
+        /* Section Headers */
+        h2 {
+            color: #001f3f;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #e9ecef;
+        }
+
+        /* Skills Section */
+        .skill-progress {
+            height: 25px;
+            background-color: #20c997;
+        }
+
+        /* Hover Effects */
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Projects and Certification Image Styles */
+        .card img {
+            height: 200px;
+            /* Medium-sized images */
+            object-fit: cover;
+        }
+
+        /* Certification Carousel */
+        .carousel-item img {
+            height: 300px;
+            /* Adjusted image size for carousel */
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001f3f;
+            color: white;
+        }
+
+        .circular-progress {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(var(--progress-color) calc(var(--percent) * 1%), #ddd 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circular-progress::before {
+            content: '';
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .progress-value {
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        [data-percent="95"] {
+            --percent: 95;
+        }
+        
+
+        [data-percent="75"] {
+            --percent: 75;
+        }
+        [data-percent="95"] {
+            --percent: 95;
+        }
+
+        [data-percent="85"] {
+            --percent: 85;
+        }
+
+        [data-percent="90"] {
+            --percent: 90;
+        }
+
+        [data-percent="80"] {
+            --percent: 80;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand hover-effect" href="#">Abdul Kareem</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" style="background: linear-gradient(135deg, #1e3c72, #2a5298); padding: 50px 0;">
+        <div class="container m-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="mb-4 text-white">Full-Stack Web Developer</h1>
+                </div>
+                <div class="col-lg-4">
+                    <img src="/images/WhatsApp Image 2024-10-05 at 18.43.44_a7849792.jpg" class="img-fluid w-75 rounded-circle hover-effect" alt="My pic">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/images/pic(1)(1).png" class="img-fluid w-75" alt="Your Photo">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">I am a Software Engineer with expertise in web development, focusing on creating
+                        responsive, dynamic, and visually appealing websites.</p>
+                    <p>With a background in HTML, CSS, JavaScript, React, and more, I aim to build seamless web
+                        experiences for users. Passionate about learning new technologies, I have developed several
+                        projects that focus on real-world problem-solving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Experience</h2>
+            <div class="row">
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Zidio Indian Company (MERN Stack Developer)</h5>
+                            <p class="card-text">Developed and maintained web applications using the MERN stack to
+                                deliver high-performance solutions.</p>
+                            <h3><small class="text-muted">Duration:3-MONTHS</small></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Nexus Berry (MERN stack Development )</h5>
+                            <p class="card-text">
+                                Developed and deployed full-stack web applications using the MERN stack (MongoDB,
+                                Express.js, React, Node.js).
+                            </p>
+
+                            <h3><small class="text-muted">Duration:4-MONTH</small></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">CodeAlpha (Web Development Internship)</h5>
+                            <p class="card-text">Worked on web development projects, focusing on enhancing my skill set
+                                in web technologies.</p>
+                            <h3><small class="text-muted">Duration:1-MONTH</small></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">CodeSoft (Web Development Internship)</h5>
+                            <p class="card-text">Worked on web real-world projects, focusing on my skill set
+                                in web technologies.</p>
+                            <h3><small class="text-muted">Duration:2-MONTH</small></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 hover-effect justify-content text-center">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">CodeAlpha (Java Development Internship)</h5>
+                            <p class="card-text">Worked on Java  real-world projects in Java Development and also learnt
+                                about App Development .</p>
+                            <h3><small class="text-muted">Duration:3-MONTH</small></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row text-center">
+
+                <!-- Skill 1: HTML -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="95" style="--progress-color: #ff5733;">
+                        <span class="progress-value">95%</span>
+                    </div>
+                    <h5 class="mt-2">HTML</h5>
+                </div>
+
+                <!-- Skill 2: CSS -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="75" style="--progress-color: #33c4ff;">
+                        <span class="progress-value">75%</span>
+                    </div>
+                    <h5 class="mt-2">CSS</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="95" style="--progress-color: #33c4ff;">
+                        <span class="progress-value">95%</span>
+                    </div>
+                    <h5 class="mt-2">Bootstraps</h5>
+                </div>
+
+                <!-- Skill 3: JavaScript -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="85" style="--progress-color: #ffc300;">
+                        <span class="progress-value">85%</span>
+                    </div>
+                    <h5 class="mt-2">JavaScript</h5>
+                </div>
+
+                <!-- Skill 4: React.js -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="90" style="--progress-color: #28a745;">
+                        <span class="progress-value">90%</span>
+                    </div>
+                    <h5 class="mt-2">React.js</h5>
+                </div>
+
+                <!-- Skill 5: Node.js -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="90" style="--progress-color: #6f42c1;">
+                        <span class="progress-value">90%</span>
+                    </div>
+                    <h5 class="mt-2">Node.js</h5>
+                </div>
+
+                <!-- Skill 6: MongoDB -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="80" style="--progress-color: #e83e8c;">
+                        <span class="progress-value">80%</span>
+                    </div>
+                    <h5 class="mt-2">MongoDB</h5>
+                </div>
+
+                <!-- Skill 7: Java -->
+                <div class="col-lg-3 col-md-4 mb-4 hover-effect">
+                    <div class="circular-progress" data-percent="75" style="--progress-color: #17a2b8;">
+                        <span class="progress-value">75%</span>
+                    </div>
+                    <h5 class="mt-2">Java Programming</h5>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row">
+                <!-- Front-End Projects -->
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Front-End Projects</h3>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/guesss(1)(1).png" class="card-img-top" alt="Personal Portfolio">
+                        <div class="card-body">
+                            <h5 class="card-title">Guess The Number Game </h5>
+                            <p class="card-text">A GuessThe Number Game  created using  Bootstrap CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/grading system.PNG" class="card-img-top" alt="Personal Portfolio">
+                        <div class="card-body">
+                            <h5 class="card-title">School Grading System </h5>
+                            <p class="card-text">A School Grading system  created using JavaScript  Bootstrap CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//calculator.PNG" class="card-img-top" alt="Personal Portfolio">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculator </h5>
+                            <p class="card-text">A Calculator  created using JavaScript  Bootstrap CSS.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//clicky" class="card-img-top" alt="Clicky Website Clone">
+                        <div class="card-body">
+                            <h5 class="card-title">Clicky Website Clone</h5>
+                            <p class="card-text">A Clicky website clone developed using React and Bootstrap.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//e-comerce" class="card-img-top" alt="E-commerce Store">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Store</h5>
+                            <p class="card-text">An online e-commerce store built using React and Redux Toolkit.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/notesapp.PNG" class="card-img-top" alt="Notes App">
+                        <div class="card-body">
+                            <h5 class="card-title">Notes App</h5>
+                            <p class="card-text">A simple notes-taking app built with React.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/Quiz.PNG" class="card-img-top" alt="Online Quiz Site">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Quiz Site</h5>
+                            <p class="card-text">An online quiz platform developed using React.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/netflex.PNG" class="card-img-top" alt="Netflix Clone">
+                        <div class="card-body">
+                            <h5 class="card-title">Netflix Clone</h5>
+                            <p class="card-text">A Netflix clone developed using HTML, CSS, JavaScript, and Bootstrap.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Back-End Projects -->
+                <div class="col-12">
+                    <h3 class="text-center mb-4">MERN Stack  Projects</h3>
+                </div>
+                <div class="col-md-12 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//fyp.jpg" class="card-img-top" alt="FYP COLLABS">
+                        <div class="card-body">
+                            <h5 class="card-title">Collaborative Management Tool For (FYP)</h5>
+                            <p class="card-text">Collaborative Management Tool For (FYP) for Managing the Final Year Projects so that they will be completed in Given time  developed using the MERN stack (MongoDB, Express, React, Node.js).</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//images.jpeg" class="card-img-top" alt="Online Book Shop">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Book Shop</h5>
+                            <p class="card-text">An online book shop developed using the MERN stack (MongoDB, Express, React, Node.js).</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//e-c" class="card-img-top" alt="E-commerce Store">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Store</h5>
+                            <p class="card-text">A back-end solution for an e-commerce store built using Node.js and MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//chatting .jpg" class="card-img-top" alt="Online Chat Application">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Chat Application</h5>
+                            <p class="card-text">A real-time chat application built using Node.js and Socket.io.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 hover-effect">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images//to-do.png" class="card-img-top" alt="TODO App">
+                        <div class="card-body">
+                            <h5 class="card-title">TODO App</h5>
+                            <p class="card-text">A simple TODO application built using Node.js and MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container ">
+            <h2 class="text-center">Certifications</h2>
+            <div class="certifications-list">
+                <div class="certification-item py-3 hover-effect">
+                    <h5>The Complete 2023 Web Development Bootcamp - Udemy</h5>
+                    <p>This course covers full-stack web development using HTML, CSS, JavaScript, Node.js, and more.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>Node.js - The Complete Guide (MVC, REST APIs, GraphQL, Deno) - Udemy</h5>
+                    <p>Comprehensive guide to mastering Node.js with hands-on projects and practical experience.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>The Complete JavaScript Course 2023 - Udemy</h5>
+                    <p>Master JavaScript with in-depth concepts, including ES6 and asynchronous programming.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>JAVA Programming  - Udemy</h5>
+                    <p>Learn all the concepts of Java and JDBC and Learn about real-world projects.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>Complete Guide to Bootstrap 5 - Udemy</h5>
+                    <p>A detailed guide to building responsive web designs using Bootstrap 5 framework.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>HTML, CSS, Bootstrap, and JavaScript Course - Udemy</h5>
+                    <p>A complete course on front-end development with HTML, CSS, Bootstrap, and JavaScript.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>Beginning C++ Programming from Zero to Advance - Udemy</h5>
+                    <p>Comprehensive introduction to C++ programming, from beginner to advanced topics.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>SQL - Udemy</h5>
+                    <p>An intermediate-level course to master SQL for database management and queries.</p>
+                </div>
+                <div class="certification-item py-3 hover-effect">
+                    <h5>MERN Stack - Nexus Berry</h5>
+                    <p>Hands-on training on MongoDB, Express.js, React, and Node.js for full-stack development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <div class="contact-info text-center">
+                <p><strong>Email:</strong> <a href="mailto:abdulgajani79@gmail.com">abdulgajani79@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+923196459910">+92 3196459910</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/a-kareem-534b02298" target="_blank">a-kareem-534b02298</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/AbdulKareem20" target="_blank">AbdulKareem20</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>&copy; 2024 Abdul Kareem. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
